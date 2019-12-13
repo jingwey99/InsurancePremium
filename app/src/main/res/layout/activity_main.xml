@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="Insurance Premium Calculator"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Age" />
+
+        <TextView
+            android:id="@+id/txtGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAge"
+            android:layout_alignStart="@id/txtAge"
+            android:layout_marginTop="20dp"
+            android:text="Gender" />
+
+        <TextView
+            android:id="@+id/txtSmoker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtGender"
+            android:layout_alignStart="@id/txtGender"
+            android:layout_marginTop="20dp"
+            android:text="Smoker" />
+
+        <TextView
+            android:id="@+id/txtTtlPremium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSmoker"
+            android:layout_alignStart="@id/txtSmoker"
+            android:layout_marginTop="20dp"
+            android:text="Total Premium:" />
+
+        <Spinner
+            android:id="@+id/spinnerAge"
+            android:layout_width="183dp"
+            android:layout_height="31dp"
+            android:layout_alignBottom="@id/txtAge"
+            android:layout_marginLeft="80dp"
+            android:layout_toEndOf="@id/txtAge"
+            android:entries="@array/AgeRange" />
+
+
+        <RadioGroup
+            android:id="@+id/radGroup"
+            android:layout_width="174dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/spinnerAge"
+            android:layout_alignBottom="@id/txtGender"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radBtnMale"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-1dp"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radBtnFemale"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:text="Female" />
+
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkBoxSmoker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/spinnerAge"
+            android:layout_alignBottom="@id/txtSmoker"
+            android:text="Smoker" />
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/btnReset"
+            android:layout_marginStart="88dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@id/btnReset"
+            android:text="Calculate" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTtlPremium"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="186dp"
+            android:text="Reset" />
+
+        <TextView
+            android:id="@+id/totalPremium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/checkBoxSmoker"
+            android:layout_alignBottom="@id/txtTtlPremium"
+            android:layout_toEndOf="@id/txtTtlPremium" />
+
+    </RelativeLayout>
+
+</ScrollView>
